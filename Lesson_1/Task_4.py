@@ -9,4 +9,4 @@ def special_string_counter(list_):
 
 
 list_ = input().split()
-print(f"{special_string_counter(list_)}")
+print(special_string_counter(list_))

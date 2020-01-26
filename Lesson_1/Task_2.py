@@ -7,4 +7,4 @@ def character_frequency(str_):
     return res
 
 str_ = input("Enter the string: ")
-print(f"{character_frequency(str_)}")  # or use collections.Counter()
+print(character_frequency(str_))  # or use collections.Counter()

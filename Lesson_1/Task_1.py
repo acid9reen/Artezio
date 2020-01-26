@@ -8,4 +8,4 @@ def capitalizer(str_):
 
 
 str_ = input("Enter the name: ")
-print(f"{capitalizer(str_)}")
+print(capitalizer(str_))

@@ -3,4 +3,4 @@ def start_end(str_):
 
 
 str_ = input("Enter the string: ")
-print(f"{start_end(str_)}")
+print(start_end(str_))

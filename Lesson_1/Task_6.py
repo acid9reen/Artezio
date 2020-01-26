@@ -3,4 +3,4 @@ def dict_gen(n):
 
 
 n = int(input("Enter the number: "))
-print(f"{dict_gen(n)}")
+print(dict_gen(n))
