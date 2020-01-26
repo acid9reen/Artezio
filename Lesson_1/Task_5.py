@@ -1,5 +1,5 @@
 def subset_of_two(set_1, set_2, set_3):
-    return set_3.issubset(set_1 | set_2)
+    return set_3.issubset(set_1) and set_3.issubset(set_2)
 
 
 set_1 = set(map(int, input("Enter the 1st set: ").split()))
