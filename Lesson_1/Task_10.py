@@ -1,5 +1,5 @@
 def get_diff(list_1, list_2):
-    return list(set(list_1) - set(list_2))
+    return list(set(list_1).symmetric_difference(set(list_2)))
 
 
 def main():
