@@ -1,11 +1,15 @@
 def capitalizer(str_):
-    lst = list(str_.split())
+    list_ = list(str_.split())
 
-    for i in range(len(lst)):
-        lst[i] = lst[i].capitalize()
+    for i in range(len(list_)):
+        list_[i] = list_[i].capitalize()
 
-    return ' '.join(lst)
+    return ' '.join(list_)
 
 
-str_ = input("Enter the name: ")
-print(capitalizer(str_))
+def main():
+    str_ = input("Enter the name: ")
+    print(capitalizer(str_))
+
+
+main()

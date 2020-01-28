@@ -5,5 +5,9 @@ def character_frequency(str_):
     return Counter(str_)
 
 
-str_ = input("Enter the string: ")
-print(character_frequency(str_))
+def main():
+    str_ = input("Enter the string: ")
+    print(character_frequency(str_))
+
+
+main()
