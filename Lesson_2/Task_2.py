@@ -6,7 +6,7 @@ def dividend_counter(a, b, c):
         if i > b:
             return 0
 
-    return (b - i + 1) // c
+    return (b - i - 1) // c + 1
 
 
 def main():
