@@ -8,5 +8,10 @@ def devident_counter(a, b, c):
 
     return (b - i + 1) // c
 
-a, b, c = map(int, input("Enter 3 numbers: ").split())
-print(devident_counter(a, b, c))
+
+def main():
+    a, b, c = map(int, input("Enter 3 numbers: ").split())
+    print(devident_counter(a, b, c))
+
+
+main()
