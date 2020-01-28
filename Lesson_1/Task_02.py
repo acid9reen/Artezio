@@ -1,10 +1,8 @@
+from collections import Counter
+
+
 def character_frequency(str_):
-    res = {}
-
-    for keys in str_:
-        res[keys] = res.get(keys, 0) + 1
-
-    return res
+    return Counter(str_)
 
 str_ = input("Enter the string: ")
-print(character_frequency(str_))  # or use collections.Counter()
+print(character_frequency(str_))
