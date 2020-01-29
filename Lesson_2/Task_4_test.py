@@ -1,6 +1,6 @@
 import unittest
 
-from Task_4 import range_
+from Task_4.Task_4 import range_
 
 
 class TestRange(unittest.TestCase):
