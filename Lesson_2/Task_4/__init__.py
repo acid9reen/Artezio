@@ -17,20 +17,20 @@ def range_(*args):
         return list_
 
     elif n == 3:
-        start = args[0]
+        step = args[2]
 
         if step == 0:
             raise ValueError("range_() step argument must not be zero")
 
+        start = args[0]
         stop = args[1]
-        step = args[2]
 
-        if start < stop:
+        if start < stop and step > 0:
             while start < stop:
                 list_.append(start)
                 start += step
 
-        elif start > stop:
+        elif start > stop and step < 0:
             while start > stop:
                 list_.append(start)
                 start += step
