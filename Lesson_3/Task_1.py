@@ -22,7 +22,7 @@ def cube_odd_positions_even_elements(list_):
 
 
 def main():
-    list_ = list(map(int, input("Enter the list: ").split()))
+    list_ = list(map(int, input("Enter elements of the list divided by space: ").split()))
     print(quad(list_))
     print(even_positions_elements(list_))
     print(cube_odd_positions_even_elements(list_))
