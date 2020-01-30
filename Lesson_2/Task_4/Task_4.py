@@ -36,3 +36,10 @@ def range_(*args):
                 start += step
 
         return list_
+
+
+def main():
+    print(range_(1, 10, 2))
+
+
+main()
