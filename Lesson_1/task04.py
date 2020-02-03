@@ -1,4 +1,9 @@
+'''Count special strings'''
+
+
 def special_string_counter(list_):
+    '''Return special strings count'''
+
     counter = 0
 
     for str_ in list_:
@@ -9,6 +14,8 @@ def special_string_counter(list_):
 
 
 def main():
+    '''Run special_string_counter function with user input'''
+
     list_ = input().split()
     print(special_string_counter(list_))
 
