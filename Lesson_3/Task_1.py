@@ -5,7 +5,7 @@ def quad(list_):
 def even_positions_elements(list_):
     res = []
 
-    for i in range(0, len(list_), 2):
+    for i in range(1, len(list_), 2):
         res.append(list_[i])
 
     return res
@@ -14,7 +14,7 @@ def even_positions_elements(list_):
 def cube_odd_positions_even_elements(list_):
     res = []
 
-    for i in range(1, len(list_), 2):
+    for i in range(0, len(list_), 2):
         if (value := list_[i]) % 2 == 0:
             res.append(value ** 3)
 
