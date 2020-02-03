@@ -29,12 +29,13 @@ def sum_mul(*args, **kwargs):
     return sum_, mul
 
 
-c = [5, 6, 8, ]
+c = [5, 6, 8, [1, 2, 3, ], ]
 
 
 def main():
     print(sum_mul(1, 2, [3, 4, (5, 6, 0)], a=(10, 11),
                   b=(3, 4, [5, 6, [7, 8], []])))
+    print(sum_mul(c[3].append(c)))
 
 
 main()
