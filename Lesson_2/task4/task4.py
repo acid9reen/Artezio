@@ -1,8 +1,8 @@
-'''Implementation of the python2 range() functon'''
+'''Implementation of the python2 range() function'''
 
 
 def range_(*args):
-    '''Implementation of the python2 range() functon'''
+    '''Implementation of the python2 range() function'''
 
     step = 1
     list_ = []
