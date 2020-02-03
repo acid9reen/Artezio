@@ -1,14 +1,18 @@
+'''Implementation of the python2 range() functon'''
+
+
 def range_(*args):
+    '''Implementation of the python2 range() functon'''
+
     step = 1
     list_ = []
 
-    n = len(args)
-
-    if n not in [1, 2, 3]:
+    if (args_len := len(args)) not in (1, 2, 3):
         raise TypeError("range_() requires 1-3 int arguments")
-    elif n == 1 or n == 2:
-        stop = args[0] if n == 1 else args[1]
-        start = 0 if n == 1 else args[0]
+
+    elif args_len in (1, 2):
+        stop = args[0] if args_len == 1 else args[1]
+        start = 0 if args_len == 1 else args[0]
 
         while start < stop:
             list_.append(start)
@@ -16,7 +20,7 @@ def range_(*args):
 
         return list_
 
-    elif n == 3:
+    elif args_len == 3:
         step = args[2]
 
         if step == 0:
@@ -39,7 +43,10 @@ def range_(*args):
 
 
 def main():
+    '''Run range_ function'''
+
     print(range_(1, 10, 2))
 
 
-main()
+if __name__ == '__main__':
+    main()

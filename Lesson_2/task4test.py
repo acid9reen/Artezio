@@ -1,9 +1,12 @@
+'''Test range_ function from task4 package'''
+
 import unittest
 
-from Task_4.Task_4 import range_
+from task4.task4 import range_
 
 
 class TestRange(unittest.TestCase):
+    '''Test range_ function from task4 package'''
 
     def test_no_arguments(self):
         with self.assertRaises(TypeError):
