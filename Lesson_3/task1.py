@@ -1,5 +1,6 @@
 '''Task 1 module'''
 
+
 def quad(list_):
     '''Return list of quads of the numbers from given list'''
 
@@ -18,7 +19,8 @@ def even_positions_elements(list_):
 
 
 def cube_odd_positions_even_elements(list_):
-    '''Return list of cubes of the odd position even numbers from given list '''
+    '''Return list of cubes of the odd
+        position even numbers from given list '''
 
     res = []
 
@@ -32,7 +34,8 @@ def cube_odd_positions_even_elements(list_):
 def main():
     '''Run all functions from this module with user input'''
 
-    list_ = list(map(int, input("Enter elements of the list divided by space: ").split()))
+    list_ = list(map(int, input("Enter elements of "
+                                "the list divided by space: ").split()))
     print(quad(list_))
     print(even_positions_elements(list_))
     print(cube_odd_positions_even_elements(list_))

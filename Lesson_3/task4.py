@@ -41,7 +41,8 @@ def xml_string_to_dict(str_):
 def main():
     '''Run xml_string_to_dict() function'''
 
-    str_ = "<root><element1 /><element2 /><element3><element4 /></element3></root>"
+    str_ = "<root><element1 /><element2 />" \
+           "<element3><element4 /></element3></root>"
     print(xml_string_to_dict(str_))
 
 

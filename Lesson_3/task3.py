@@ -1,20 +1,21 @@
-'''Calculate average per 4 elements and the max element the function've called with'''
+'''Calculate average per 4 elements and the
+    max element the function've called with'''
 
 
-def average(aaa, bbb, ccc, ddd):
-    '''Calculate average per 4 elements and the max element the function've called with'''
+def average(aaa, bbb, ccc, ddd, max_m=[None]):
+    '''Calculate average per 4 elements and the
+        max element the function've called with'''
 
     list_ = [aaa, bbb, ccc, ddd]
 
-    if average.max_ is None:
-        average.max_ = max(list_)
+    if max_m[0] is None:
+        max_ = max(list_)
+        max_m[0] = max_
     else:
-        average.max_ = average.max_ if average.max_ > (max_ := max(list_)) else max_
+        max_ = max_m[0] if max_m[0] > (max_ := max(list_)) else max_
+        max_m[0] = max_
 
-    return sum(list_) / 4, average.max_
-
-
-average.max_ = None
+    return sum(list_) / 4, max_
 
 
 def main():
