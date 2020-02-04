@@ -25,8 +25,8 @@ def tree_to_dict(tree):
     dict_ = {'name': tree.tag, 'children': []}
 
     if children := list(tree):
-        for child in map(tree_to_dict, children):
-            dict_['children'].append(child)
+        for child_dict in map(tree_to_dict, children):
+            dict_['children'].append(child_dict)
 
     return dict_
 
