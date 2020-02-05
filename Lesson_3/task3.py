@@ -12,7 +12,8 @@ def average(aaa, bbb, ccc, ddd, max_=[None]):
         max_[0] = max(list_)
 
     else:
-        max_[0] = max_[0] if max_[0] > (max_c := max(list_)) else max_c
+        max_c = max(list_)
+        max_[0] = max_[0] if max_[0] > max_c else max_c
 
     return sum(list_) / 4, max_[0]
 
