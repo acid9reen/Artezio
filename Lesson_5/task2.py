@@ -56,7 +56,7 @@ class Student:
         for value in self.labs.values():
             total_mark += value[0]
 
-        if (coef := total_mark / max_mark) < self.conf["k"]:
-            return coef, False
+        if total_mark / max_mark < self.conf["k"]:
+            return total_mark, False
 
-        return coef, True
+        return total_mark, True
