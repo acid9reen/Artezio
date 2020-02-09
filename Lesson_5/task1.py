@@ -44,9 +44,11 @@ class Complex:
 def main():
     '''Make conversions with complex class with user input'''
 
-    aaa, bbb = map(int, input("Enter two numbers separated by space: ").split())
+    aaa, bbb = map(int, input("Enter two numbers "
+                              "separated by space: ").split())
     compl1 = Complex(aaa, bbb)
-    aaa, bbb = map(int, input("Enter two numbers separated by space: ").split())
+    aaa, bbb = map(int, input("Enter two numbers "
+                              "separated by space: ").split())
     compl2 = Complex(aaa, bbb)
 
     print(f"Sum: {compl1 + compl2}")
