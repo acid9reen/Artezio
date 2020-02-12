@@ -1,11 +1,11 @@
 '''Generator that return cyclic iterator'''
 
 
-def cycle():
+def cycle(list_=('a', 'b', 'c')):
     '''Generator that return cyclic iterator'''
 
     while True:
-        for item in ['a', 'b', 'c']:
+        for item in list_:
             yield item
 
 
@@ -14,9 +14,10 @@ def main():
         call next() function for four times'''
 
     i = 0
-    obj = cycle()
+    list_ = [1, 2, 3, 4, 5]
+    obj = cycle(list_)
 
-    while i < 4:
+    while i < 7:
         print(next(obj))
         i += 1
 
