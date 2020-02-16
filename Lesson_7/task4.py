@@ -8,7 +8,6 @@ def annotations_checker(func):
     '''Check annotation for function'''
 
     def wrapper(*args):
-        args = tuple(args)
         annotations = func.__annotations__
         keys = annotations.keys()
         varnames = func.__code__.co_varnames
