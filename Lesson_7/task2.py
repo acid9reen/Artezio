@@ -36,12 +36,12 @@ def time_methods(*methods):
                 self.o_instance = cls(*args, **kwargs)
 
             def __getattr__(self, item):
-                method = self.o_instance.__getattribute__(item)
+                attribute = self.o_instance.__getattribute__(item)
 
-                if method.__name__ in methods:
-                    return time_this(method)
+                if attribute.__name__ in methods:
+                    return time_this(attribute)
 
-                return method
+                return attribute
 
         return WrapperClass
 
