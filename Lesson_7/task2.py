@@ -26,7 +26,7 @@ def time_methods(*methods):
     '''Take decorator arguments'''
 
     def decorator(cls):
-        '''Ckass decorator that calculate
+        '''Class decorator that calculate
             given method's running time'''
 
         class WrapperClass:
