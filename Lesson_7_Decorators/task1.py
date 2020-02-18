@@ -9,12 +9,14 @@ def decorator_maker_with_arguments(calls):
 
     def average_time(func):
         '''Average function time decorator'''
+        time_arr = []
 
-        def wrapper(*args, time_arr=[]):
+        def wrapper(*args, **kwargs):
             '''Wrapper'''
 
+            nonlocal time_arr
             time_1 = time.time()
-            result = func(*args)
+            result = func(*args, **kwargs)
             time_2 = int((time.time() - time_1) * 1000)
 
             if len(time_arr) < calls:

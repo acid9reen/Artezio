@@ -8,14 +8,9 @@ def time_this(func):
 
     def wrapper(*args, **kwargs):
 
-        if args and kwargs:
-            time_1 = time.time()
-            func(args, kwargs)
-            time_2 = int((time.time() - time_1) * 1000)
-        else:
-            time_1 = time.time()
-            func()
-            time_2 = int((time.time() - time_1) * 1000)
+        time_1 = time.time()
+        func(*args, **kwargs)
+        time_2 = int((time.time() - time_1) * 1000)
 
         print(f"'{func.__name__}' method running time: {time_2} ms")
 
