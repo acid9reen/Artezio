@@ -7,10 +7,12 @@ from math import sqrt
 def annotations_checker(func):
     '''Check annotation for function'''
 
-    def wrapper(*args):
+    def wrapper(*args, **kwargs):
         annotations = func.__annotations__
         keys = annotations.keys()
         varnames = func.__code__.co_varnames
+        all_args = list(args)
+        all_args.extend(kwargs.values())
 
         if 'return' not in keys:
             raise Exception("The annotation is incomplete")
@@ -19,12 +21,13 @@ def annotations_checker(func):
             if i not in keys:
                 raise Exception("The annotation is incomplete")
 
-        for index, value in enumerate(args):
+        for index, value in enumerate(all_args):
             if not isinstance(value, annotations.get(varnames[index])):
                 print("The  passed arguments didn't match the annotation")
+
                 return None
 
-        result = func(*args)
+        result = func(*args, **kwargs)
 
         if not isinstance(result, annotations.get('return')):
             print("The  passed arguments didn't match the annotation")
