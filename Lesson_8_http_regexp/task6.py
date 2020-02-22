@@ -7,7 +7,7 @@ def main():
     '''Password regexp'''
 
     password = input("Enter the sentence: ")
-    reg = r"\b(\w+).+\1\b.+\1\b.+\1\b\.$"
+    reg = r"\b(\w+)\s+.*\1\b\s+.*\1\b\s+.*\1\b.*\.$"
 
     pattern = re.compile(reg, re.IGNORECASE)
     match = re.search(pattern, password)
